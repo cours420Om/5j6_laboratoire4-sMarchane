@@ -1,6 +1,7 @@
 package com.example.labo4;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
@@ -109,10 +110,13 @@ public class Fragment1 extends Fragment {
            @Override
            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
 
+
+
                 Fragment2 fragment2 = (Fragment2)getFragmentManager().findFragmentById(R.id.fragment2);
                 fragment2.setmethod(listeRepas.get(i).toString2());
+                fragment2.methode(listeRepas.get(i).toString3());
 
-                //view.setBackground(Drawable.createFromPath("#34b356"));
+
            }
        });
 

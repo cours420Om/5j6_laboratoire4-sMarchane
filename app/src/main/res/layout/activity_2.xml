@@ -78,7 +78,7 @@
             android:layout_height="108dp" />
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btn_commander"
             android:layout_width="match_parent"
             android:layout_height="82dp"
             android:text="Commander le repas sélectionné" />

@@ -18,8 +18,11 @@ public class repas {
     }
     public String toString2(){
 
-        return categorie + " \n" + description;
+        return categorie + " \n\n" + description;
 
+    }
+    public String toString3(){
+        return categorie + "\t" + nom;
     }
     public repas(int NoRepas, String Nom, String Description, String Categorie, double Prix) {
 

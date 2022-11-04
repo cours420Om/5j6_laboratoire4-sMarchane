@@ -17,6 +17,7 @@ import android.widget.TextView;
  */
 public class Fragment2 extends Fragment {
 
+    String notification;
     View fragment2View;
     TextView tv_affichage;
 
@@ -75,5 +76,11 @@ public class Fragment2 extends Fragment {
 
         tv_affichage.setText(textstr);
 
+
+    }
+
+    public void methode(String txt){
+
+        notification = txt;
     }
 }
