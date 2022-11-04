@@ -41,4 +41,48 @@
         app:layout_constraintHorizontal_bias="0.921"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_nomClientRecu" />
+
+    <TextView
+        android:id="@+id/tv_titre"
+        android:layout_width="218dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="84dp"
+        android:fontFamily="casual"
+        android:text="Menu - Miam-O-Pizza"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_commandePour" />
+
+    <LinearLayout
+        android:layout_width="409dp"
+        android:layout_height="331dp"
+        android:layout_marginTop="36dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_titre">
+
+        <fragment
+            android:id="@+id/fragment1"
+            android:name="com.example.labo4.Fragment1"
+            android:layout_width="match_parent"
+            android:layout_height="118dp" />
+
+
+        <fragment
+            android:id="@+id/fragment2"
+            android:name="com.example.labo4.Fragment2"
+            android:layout_width="match_parent"
+            android:layout_height="108dp" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="82dp"
+            android:text="Commander le repas sélectionné" />
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
