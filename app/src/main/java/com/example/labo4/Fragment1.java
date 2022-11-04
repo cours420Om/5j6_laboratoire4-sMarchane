@@ -1,6 +1,7 @@
 package com.example.labo4;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,6 +11,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -87,13 +89,13 @@ public class Fragment1 extends Fragment {
         Type listRepasType = new TypeToken<List<repas>>() { }.getType();
         List<repas> listeRepas = gson.fromJson(dataFichierJson, listRepasType);
 
-        StringBuilder builder = new StringBuilder();
+        /*StringBuilder builder = new StringBuilder();
         for(repas rep: listeRepas){
             builder.append(rep.getNom()).append("\t");
-            builder.append(rep.getPrix()).append("\n");
-        }
+            builder.append(rep.getPrix()).append("$\n");
+        }*/
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getContext(), android.R.layout.simple_list_item_1, Collections.singletonList(builder.toString()));
+        ArrayAdapter<repas> adapter = new ArrayAdapter<repas>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, listeRepas);
         Log.i("Test", String.valueOf(listeRepas.get(0)));
 
         fragment1View =  inflater.inflate(R.layout.fragment_1, container, false);
@@ -103,6 +105,16 @@ public class Fragment1 extends Fragment {
 
         // Inflate the layout for this fragment
 
+       lv_liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+           @Override
+           public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+
+                Fragment2 fragment2 = (Fragment2)getFragmentManager().findFragmentById(R.id.fragment2);
+                fragment2.setmethod(listeRepas.get(i).toString2());
+
+                //view.setBackground(Drawable.createFromPath("#34b356"));
+           }
+       });
 
 
 

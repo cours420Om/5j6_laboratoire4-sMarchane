@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +16,9 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class Fragment2 extends Fragment {
+
+    View fragment2View;
+    TextView tv_affichage;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +64,16 @@ public class Fragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_2, container, false);
+        fragment2View = inflater.inflate(R.layout.fragment_2, container, false);
+        tv_affichage = (TextView)fragment2View.findViewById(R.id.tv_res);
+
+
+        return fragment2View;
+    }
+
+    public void setmethod(String textstr){
+
+        tv_affichage.setText(textstr);
+
     }
 }

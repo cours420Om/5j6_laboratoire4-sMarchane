@@ -10,19 +10,17 @@ public class repas {
 
     @Override
     public String toString() {
-        return "repas{" +
-                "noRepas=" + noRepas +
-                ", nom='" + nom + '\'' +
-                ", description='" + description + '\'' +
-                ", categorie='" + categorie + '\'' +
-                ", prix=" + prix +
-                '}';
+        return nom + " \t\t" + prix;
     }
 
     public repas(){
 
     }
+    public String toString2(){
 
+        return categorie + " \n" + description;
+
+    }
     public repas(int NoRepas, String Nom, String Description, String Categorie, double Prix) {
 
         this.noRepas = NoRepas;
